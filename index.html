@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stiffness Matrix K</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="text-5xl items-center text-center py-10">
+        <h2>Stiffness Matrix K</h2>
+    </div>
+    <div class="grid gap-6 px-6">
+        <div class="flex gap-6">
+            <label>Enter x1:</label>
+            <input type="number" id="x1" step="any" class="border-2 rounded-md">
+            <label>Enter x2:</label>
+            <input type="number" id="y1" step="any" class="border-2 rounded-md"><br>
+        </div>
+        <div class="flex gap-6">
+            <label>Enter x2:</label>
+            <input type="number" id="x2" step="any" class="border-2 rounded-md">
+            <label>Enter y2:</label>
+            <input type="number" id="y2" step="any" class="border-2 rounded-md"><br>
+        </div>
+        <div class="flex gap-6">
+            <label>Enter x3:</label>
+            <input type="number" id="x3" step="any" class="border-2 rounded-md">
+            <label>Enter y3:</label>
+            <input type="number" id="y3" step="any" class="border-2 rounded-md"><br>
+        </div>
+        <div class="flex gap-6">
+            <label>Condition (1=Plane Stress, 2=Plane Strain):</label>
+            <select id="condition" class="border-2 rounded-md">
+                <option value="1">1 - Plane Stress</option>
+                <option value="2">2 - Plane Strain</option>
+            </select><br>
+        </div>
+        <div class="flex gap-6">
+            <label>Poisson's Ratio (μ):</label>
+            <input type="number" id="u" step="any" class="border-2 rounded-md"><br>
+        </div>
+        <div class="flex gap-6">
+            <label>Modulus of Rigidity (E):</label>
+            <input type="number" id="E" step="any" class="border-2 rounded-md"><br>
+        </div>
+        <div class="flex gap-6">
+            <label>Thickness (t):</label>
+            <input type="number" id="t" step="any" class="border-2 rounded-md"><br>
+        </div>
+        <div class="flex gap-6">
+            <div class="p-2 bg-red-600 rounded-lg">
+                <button onclick="calculateMatrix()">Submit</button>
+            </div>
+        </div>
+        <div id="matrix-output" class="p-6"></div>
+    </div>
+    <script src="Script.js"></script>
+</body>
+</html>
